@@ -1,9 +1,9 @@
 <template>
   <v-footer padless>
-    <v-card flat tile width="100%" class="text-center" color="black">
+    <v-card flat tile width="100%" class="text-center" color="blue-darken-4">
       <v-card-text>
         <v-btn v-for="item in icons" :key="item" class="mx-4" icon :href="item.link">
-          <v-icon size="24px" color="black">
+          <v-icon size="24px" color="blue-darken-4">
             {{ item.icon }}
           </v-icon>
         </v-btn>
@@ -36,3 +36,9 @@ export default {
   })
 }
 </script>
+
+<style>
+.v-footer {
+  padding: 8px 0 !important;
+}
+</style>

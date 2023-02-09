@@ -1,30 +1,31 @@
 <template>
-  <v-app-bar fixed elevate-on-scroll app color="black">
-    <v-toolbar-title>
-      <v-img src="../../assets/wolf.png" width="75px" />
-    </v-toolbar-title>
+  <v-app-bar app color="blue-darken-4" dark flat class="px-12">
+    <v-btn>
+      <v-icon color="yellow" left class="mr-2">mdi-account</v-icon> Davi
+    </v-btn>
     <v-spacer />
-    <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn text v-text="'Link One'" />
-      <v-btn text v-text="'Link Two'" />
-      <v-btn text v-text="'Link Three'" />
-    </v-toolbar-items>
-    <v-text-field
-      v-model="search"
-      append-icon="mdi-magnify"
-      label="Search"
-      single-line
-      hide-details
-    />
+    <v-btn text @click="scroll('home')" class="text-yellow">Home</v-btn>
+    <v-btn text v-for="item in options" :key="item" @click="scroll(item.to)" v-text="item.name" />
   </v-app-bar>
 </template>
 
 <script>
 export default {
-  name: 'NavBar',
   data: () => ({
-    search: '',
-    collapseOnScroll: true,
+    options: [
+      { name: 'About', to: 'about' },
+      { name: 'Portfolio', to:'portfolio' },
+      { name: 'Services', to:'services' },
+      { name: 'Page', to:'page' },
+      { name: 'Bio', to:'bio' },
+      { name: 'Contact', to:'contact' }
+    ]
   }),
-}
+  methods: {
+    scroll(refName) {
+      const element = document.getElementById(refName);
+      element.scrollIntoView({ behavior: "smooth" });
+    },
+  },
+};
 </script>
