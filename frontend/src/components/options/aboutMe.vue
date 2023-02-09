@@ -7,19 +7,15 @@
           <h1 class="text-white">I'm Davi Rangel</h1>
           <span class="text-grey">Web Developer</span><br />
 
-          <v-btn tile dark class="text-yellow mt-8" variant="outlined">
+          <v-btn tile dark class="text-yellow mt-8" variant="outlined" href="https://wa.link/i01915">
             Contact me
           </v-btn>
         </div>
       </v-col>
-      <v-col cols="2">
-        <div class="down mt-16">
-          <v-icon>mdi-arrow-down</v-icon>
-        </div>
-      </v-col>
+      <v-col/>
       <v-col cols="5">
         <div style="position: relative; z-index: 9999" class="mt-16">
-          <v-img src="i1.png" contain max-height="300" />
+          <v-img src="../../assets/profile.png" contain max-height="300" />
         </div>
       </v-col>
     </v-row>
@@ -29,42 +25,34 @@
       <v-row>
         <v-col cols="12" sm="6">
           <div class="egg">
-            <v-img src="i2.png" max-height="300" />
+            <v-img src="../../assets/aboutme.png" max-height="280" />
           </div>
         </v-col>
         <v-col cols="12" sm="6">
           <h5 class="mt-16">About Me</h5>
-          <div style="width: 120px">
-            <v-slider v-model="slider2" color="yellow" label="track-color" />
-          </div>
-          <h4 class="mt-n4">I Am a Creative Web Designer</h4>
-          <h4 class="">And Developer</h4>
+          <br />
+          <h4 class="mt-n4">I Am a Creative Web Developer</h4>
           <p class="text-grey">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Aspernatur, ullam perspiciatis fugiat temporibus laboriosam
-            accusamus tempora repellendus sequi sed cum dolorum vero est.
-            Placeat dicta architecto reiciendis est veniam. Unde.
+            Hello, how are you doing? If you are here it means
+            you're at least a bit interested about who am I, come
+            along and I will tell everything you need to know!
           </p>
           <br />
           <p class="text-grey">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Aspernatur, ullam perspiciatis fugiat temporibus laboriosam
-            accusamus tempora repellendus sequi sed cum dolorum vero est.
-            Placeat dicta architecto reiciendis est veniam. Unde.
+            I'm a frontend developer and student at the Universidade Federal de Viçosa in Brazil,
+            I'm currently in my 7th semester. I've been working as a developer since July 2022,
+            but my passion for programming came earlier. When I enrolled in the university,
+            I was sure that I'd would hate my time there, but I was completely wrong and my life
+            has been changed. Now I work in two different places at the same time: at Banco Afro,
+            where I develop interfaces for our clients, and at Rede São Roque, where I make the interfaces
+            for our employees, and in both jobs the primary framework is Vue for the frontend and
+            Node for the backend. Recently I've taken on more responsibilities in Banco Afro,
+            where I created some back-end applications.
           </p>
-          <v-btn tile dark color="yellow" class="mt-4">
-            Download Resume
-          </v-btn>
         </v-col>
       </v-row>
     </div>
   </v-col>
-  <div class="text-center mt-4">
-    <h2>What we Do</h2>
-    <div style="width: 120px; margin: 0 auto">
-      <v-slider v-model="slider2" color="yellow" label="track-color"></v-slider>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -98,7 +86,7 @@ export default defineComponent({
   height: 100%;
   width: 50%;
   background: #0D47A1;
-  transform: skew(0deg, 6deg);
+  transform: skew(0deg, 0deg);
 }
 
 .head:after {
@@ -109,7 +97,7 @@ export default defineComponent({
   height: 100%;
   width: 50%;
   background: #0D47A1;
-  transform: skew(0deg, -6deg);
+  transform: skew(0deg, 0deg);
 }
 
 .down {

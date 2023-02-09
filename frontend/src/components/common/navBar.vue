@@ -14,10 +14,8 @@ export default {
   data: () => ({
     options: [
       { name: 'About', to: 'about' },
-      { name: 'Portfolio', to:'portfolio' },
+      { name: 'Skills', to:'skills' },
       { name: 'Services', to:'services' },
-      { name: 'Page', to:'page' },
-      { name: 'Bio', to:'bio' },
       { name: 'Contact', to:'contact' }
     ]
   }),

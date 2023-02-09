@@ -1,12 +1,10 @@
 <template>
-  <v-app>
+  <v-app id="home">
     <navBar />
     <v-container fluid>
       <aboutMe />
       <myPortfolio />
       <myServices />
-      <myPage />
-      <myBio />
       <contactMe />
     </v-container>
     <pageFooter />
@@ -17,10 +15,8 @@
 import navBar from './components/common/navBar.vue'
 import pageFooter from './components/common/footer.vue'
 import aboutMe from './components/options/aboutMe.vue'
-import myPortfolio from './components/options/myPortfolio.vue'
+import myPortfolio from './components/options/mySkills.vue'
 import myServices from './components/options/myServices.vue'
-import myPage from './components/options/myPage.vue'
-import myBio from './components/options/myBio.vue'
 import contactMe from './components/options/contactMe.vue'
 
 export default {
@@ -31,8 +27,6 @@ export default {
     aboutMe,
     myPortfolio,
     myServices,
-    myPage,
-    myBio,
     contactMe
   }
 }
