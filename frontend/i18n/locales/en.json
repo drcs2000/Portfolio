@@ -38,9 +38,9 @@
     "eyebrow": "Selected work",
     "title": "Complex products, made dependable.",
     "intro": "A selection of the systems, migrations, and technical initiatives where I combined product thinking with hands-on engineering.",
-    "independentEyebrow": "Independent projects",
+    "independentEyebrow": "Independent and collaborative projects",
     "independentTitle": "Products built beyond the day job.",
-    "independentIntro": "Full-stack projects where I explored product ideas, data, and learning through working software.",
+    "independentIntro": "Full-stack projects where I turned product ideas, collaboration, and learning into working software.",
     "reliability": "Overall integrations area result",
     "errors": "in errors",
     "cases": [
@@ -71,6 +71,37 @@
         "tags": ["Vue 2/3", "Nuxt 2/3", "Vuex", "Pinia", "TypeScript", "Architecture"]
       },
       {
+        "type": "Internal Platform · First Development Team",
+        "year": "2023 — 2025",
+        "title": "Rede São Roque operations platform",
+        "description": "I joined the company's first development team and helped build its internal platform from the ground up, supporting gas station operations from the login screen through receipt submission.",
+        "outcomes": [
+          "Built the platform from its foundations as part of the company's first development team",
+          "Developed the complete user journey, including authentication, navigation, and operational workflows used at gas stations",
+          "Created the workflow for submitting and tracking receipts through the internal platform",
+          "Developed responsive Vue.js interfaces and reusable components integrated with back-end APIs"
+        ],
+        "tags": ["Vue.js", "JavaScript", "HTML/CSS", "REST APIs", "Internal Product"]
+      },
+      {
+        "type": "Collaborative Project · Back End and Real Time",
+        "year": "Collaborative project",
+        "title": "Collaborative whiteboard",
+        "description": "A whiteboard application with independent rooms and real-time collaboration. I was responsible for the entire back-end architecture and implementation and also contributed to the interface design.",
+        "outcomes": [
+          "Built the authentication and room management API with Node.js, Express, TypeScript, and MongoDB",
+          "Implemented canvas synchronization, user presence, and real-time communication with Socket.IO",
+          "Developed the whiteboard-core service to monitor servers, rooms, users, and availability through WebSocket and a REST API",
+          "Collaborated on the application's visual design and user experience"
+        ],
+        "tags": ["Node.js", "TypeScript", "Express", "Socket.IO", "MongoDB", "WebSocket"],
+        "links": [
+          { "label": "Open project", "url": "https://whiteboard-app-murex.vercel.app/login" },
+          { "label": "Application source", "url": "https://github.com/VictorAlves08/whiteboard-app" },
+          { "label": "Core source", "url": "https://github.com/VictorAlves08/whiteboard-core" }
+        ]
+      },
+      {
         "type": "Capstone · Full Stack",
         "year": "Selected project",
         "title": "Sports prediction platform",
@@ -84,22 +115,6 @@
         "links": [
           { "label": "Open project", "url": "https://mvp-kappa-two.vercel.app/" },
           { "label": "View source", "url": "https://github.com/drcs2000/mvp" }
-        ]
-      },
-      {
-        "type": "Study Tool · Full Stack",
-        "year": "Personal project",
-        "title": "Operating Systems Quiz",
-        "description": "An application I built to support my Operating Systems studies through quizzes with difficulty levels, saved progress, and a ranking shared among participants.",
-        "outcomes": [
-          "Built a responsive Vue 3 quiz experience with difficulty selection and immediate feedback",
-          "Managed application state with Pinia and persisted each session's progress locally",
-          "Developed an Express API backed by PostgreSQL for questions and score rankings"
-        ],
-        "tags": ["Vue 3", "Pinia", "Express", "PostgreSQL", "REST APIs"],
-        "links": [
-          { "label": "Open project", "url": "https://sistemas-operacionais-jeps.vercel.app/" },
-          { "label": "View source", "url": "https://github.com/drcs2000/sistemas-operacionais" }
         ]
       }
     ]

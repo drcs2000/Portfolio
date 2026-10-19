@@ -38,9 +38,9 @@
     "eyebrow": "Trabalhos selecionados",
     "title": "Produtos complexos, feitos para serem confiáveis.",
     "intro": "Uma seleção de sistemas, migrações e iniciativas técnicas em que combinei visão de produto com engenharia na prática.",
-    "independentEyebrow": "Projetos independentes",
+    "independentEyebrow": "Projetos autorais e colaborativos",
     "independentTitle": "Produtos construídos além do trabalho.",
-    "independentIntro": "Projetos full stack em que explorei ideias de produto, dados e aprendizado por meio de software funcional.",
+    "independentIntro": "Projetos full stack em que transformei ideias de produto, colaboração e aprendizado em software funcional.",
     "reliability": "Resultado geral da área de integrações",
     "errors": "nos erros",
     "cases": [
@@ -71,6 +71,37 @@
         "tags": ["Vue 2/3", "Nuxt 2/3", "Vuex", "Pinia", "TypeScript", "Arquitetura"]
       },
       {
+        "type": "Plataforma interna · Primeira equipe de desenvolvimento",
+        "year": "2023 — 2025",
+        "title": "Plataforma operacional da Rede São Roque",
+        "description": "Integrei a primeira equipe de desenvolvimento da empresa e participei da construção, do zero, da plataforma interna que passou a atender os fluxos operacionais dos postos, da tela de login ao envio de comprovantes.",
+        "outcomes": [
+          "Construção da plataforma desde sua base, como parte da primeira equipe de desenvolvimento da empresa",
+          "Desenvolvimento da jornada completa, incluindo autenticação, navegação e fluxos operacionais utilizados nos postos de gasolina",
+          "Criação do fluxo de envio e acompanhamento de comprovantes pela plataforma interna",
+          "Desenvolvimento de interfaces responsivas e componentes reutilizáveis em Vue.js, integrados às APIs do back-end"
+        ],
+        "tags": ["Vue.js", "JavaScript", "HTML/CSS", "APIs REST", "Produto interno"]
+      },
+      {
+        "type": "Projeto colaborativo · Backend e tempo real",
+        "year": "Projeto colaborativo",
+        "title": "Quadro branco colaborativo",
+        "description": "Aplicação de quadro branco com salas independentes e colaboração em tempo real. Fui responsável por toda a arquitetura e implementação do back-end e também contribuí para a criação do design da interface.",
+        "outcomes": [
+          "Construção da API de autenticação e gerenciamento de salas com Node.js, Express, TypeScript e MongoDB",
+          "Implementação da sincronização do canvas, presença de usuários e comunicação em tempo real com Socket.IO",
+          "Desenvolvimento do serviço whiteboard-core para monitorar servidores, salas, usuários e disponibilidade por WebSocket e API REST",
+          "Colaboração na definição do design e da experiência visual da aplicação"
+        ],
+        "tags": ["Node.js", "TypeScript", "Express", "Socket.IO", "MongoDB", "WebSocket"],
+        "links": [
+          { "label": "Abrir projeto", "url": "https://whiteboard-app-murex.vercel.app/login" },
+          { "label": "Código da aplicação", "url": "https://github.com/VictorAlves08/whiteboard-app" },
+          { "label": "Código do core", "url": "https://github.com/VictorAlves08/whiteboard-core" }
+        ]
+      },
+      {
         "type": "TCC · Full Stack",
         "year": "Projeto selecionado",
         "title": "Plataforma de bolão esportivo",
@@ -84,22 +115,6 @@
         "links": [
           { "label": "Abrir projeto", "url": "https://mvp-kappa-two.vercel.app/" },
           { "label": "Ver código", "url": "https://github.com/drcs2000/mvp" }
-        ]
-      },
-      {
-        "type": "Ferramenta de estudo · Full Stack",
-        "year": "Projeto pessoal",
-        "title": "Quiz de Sistemas Operacionais",
-        "description": "Aplicação criada para apoiar meus estudos de Sistemas Operacionais por meio de quizzes com níveis de dificuldade, progresso salvo e um ranking compartilhado entre participantes.",
-        "outcomes": [
-          "Criação de uma experiência responsiva de quiz em Vue 3 com seleção de dificuldade e feedback imediato",
-          "Gerenciamento de estado com Pinia e persistência local do progresso de cada sessão",
-          "Desenvolvimento de uma API em Express com PostgreSQL para perguntas e ranking de pontuações"
-        ],
-        "tags": ["Vue 3", "Pinia", "Express", "PostgreSQL", "APIs REST"],
-        "links": [
-          { "label": "Abrir projeto", "url": "https://sistemas-operacionais-jeps.vercel.app/" },
-          { "label": "Ver código", "url": "https://github.com/drcs2000/sistemas-operacionais" }
         ]
       }
     ]

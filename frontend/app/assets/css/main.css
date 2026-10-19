@@ -721,12 +721,14 @@ img {
   line-height: 1.6;
 }
 
-.case-independent--left {
+.case-independent--left,
+.case-split--left {
   padding-right: 42px;
   border-right: 1px solid var(--ink);
 }
 
-.case-independent--right {
+.case-independent--right,
+.case-split--right {
   padding-left: 42px;
 }
 
@@ -1763,7 +1765,9 @@ img {
   .case-compact,
   .case-wide,
   .case-independent--left,
-  .case-independent--right {
+  .case-independent--right,
+  .case-split--left,
+  .case-split--right {
     grid-template-columns: 42px 1fr;
     padding: 32px 0;
     border-right: 0;

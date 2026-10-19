@@ -135,7 +135,7 @@
 
           <article
             v-reveal="100"
-            class="case-study case-compact case-wide interactive-detail"
+            class="case-study case-compact case-split--left interactive-detail"
             role="button"
             tabindex="0"
             aria-haspopup="dialog"
@@ -154,6 +154,27 @@
             </div>
           </article>
 
+          <article
+            v-reveal="200"
+            class="case-study case-compact case-split--right interactive-detail"
+            role="button"
+            tabindex="0"
+            aria-haspopup="dialog"
+            :aria-label="t('details.openNamed', { title: content.work.cases[2].title })"
+            @click="openDetail('work', 2, $event)"
+            @keydown.enter.prevent="openDetail('work', 2, $event)"
+            @keydown.space.prevent="openDetail('work', 2, $event)"
+          >
+            <div class="case-number">03</div>
+            <div>
+              <div class="case-topline"><span>{{ content.work.cases[2].type }}</span><span>{{ content.work.cases[2].year }}</span></div>
+              <h3>{{ content.work.cases[2].title }}</h3>
+              <p>{{ content.work.cases[2].description }}</p>
+              <div class="tag-list"><span v-for="tag in content.work.cases[2].tags" :key="tag">{{ tag }}</span></div>
+              <div class="detail-hint">{{ t('details.open') }} <Icon name="lucide:arrow-up-right" /></div>
+            </div>
+          </article>
+
           <div v-reveal class="project-divider">
             <p class="section-index">{{ t('work.independentEyebrow') }}</p>
             <div>
@@ -163,20 +184,20 @@
           </div>
 
           <article
-            v-for="(item, index) in content.work.cases.slice(2)"
+            v-for="(item, index) in content.work.cases.slice(3)"
             :key="item.title"
             v-reveal="Number(index) * 100"
             class="case-study case-compact case-independent interactive-detail"
-            :class="Number(index) === 0 ? 'case-independent--left' : 'case-independent--right'"
+            :class="Number(index) % 2 === 0 ? 'case-independent--left' : 'case-independent--right'"
             role="button"
             tabindex="0"
             aria-haspopup="dialog"
             :aria-label="t('details.openNamed', { title: item.title })"
-            @click="openDetail('work', Number(index) + 2, $event)"
-            @keydown.enter.prevent="openDetail('work', Number(index) + 2, $event)"
-            @keydown.space.prevent="openDetail('work', Number(index) + 2, $event)"
+            @click="openDetail('work', Number(index) + 3, $event)"
+            @keydown.enter.prevent="openDetail('work', Number(index) + 3, $event)"
+            @keydown.space.prevent="openDetail('work', Number(index) + 3, $event)"
           >
-            <div class="case-number">0{{ Number(index) + 3 }}</div>
+            <div class="case-number">0{{ Number(index) + 4 }}</div>
             <div>
               <div class="case-topline"><span>{{ item.type }}</span><span>{{ item.year }}</span></div>
               <h3>{{ item.title }}</h3>
