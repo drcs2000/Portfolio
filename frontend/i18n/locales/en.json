@@ -145,7 +145,22 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Let’s build something that lasts.",
-    "text": "I’m open to full-stack and front-end opportunities where product quality, ownership, and technical growth matter. Based in Brasília and open to relocating to Portugal."
+    "text": "I’m open to full-stack and front-end opportunities where product quality, ownership, and technical growth matter. Based in Brasília and open to relocating to Portugal.",
+    "emailSubject": "Portfolio contact - opportunity or project",
+    "messageGreeting": "Hello, Davi!",
+    "emailIntro": "I found your portfolio and would like to discuss an opportunity or project.",
+    "nameLabel": "Name",
+    "namePlaceholder": "[your name]",
+    "companyLabel": "Company",
+    "companyPlaceholder": "[company]",
+    "contextLabel": "Context",
+    "contextPlaceholder": "[briefly describe the opportunity or project]",
+    "conversationQuestion": "Could we schedule a conversation?",
+    "emailClosing": "Best regards,",
+    "whatsappLabel": "Chat on WhatsApp",
+    "whatsappHeading": "Portfolio contact",
+    "whatsappIntro": "I found your portfolio and would like to discuss an opportunity or project.",
+    "whatsappQuestion": "Could we talk?"
   },
   "footer": {
     "note": "Designed and built with Nuxt",

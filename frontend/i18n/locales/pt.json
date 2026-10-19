@@ -145,7 +145,22 @@
   "contact": {
     "eyebrow": "Contato",
     "title": "Vamos construir algo que dure.",
-    "text": "Estou aberto a oportunidades full stack e front-end em que qualidade de produto, autonomia e crescimento técnico importem. Moro em Brasília e tenho disponibilidade para mudança para Portugal."
+    "text": "Estou aberto a oportunidades full stack e front-end em que qualidade de produto, autonomia e crescimento técnico importem. Moro em Brasília e tenho disponibilidade para mudança para Portugal.",
+    "emailSubject": "Contato pelo portfólio - oportunidade ou projeto",
+    "messageGreeting": "Olá, Davi!",
+    "emailIntro": "Encontrei seu portfólio e gostaria de conversar sobre uma oportunidade ou projeto.",
+    "nameLabel": "Nome",
+    "namePlaceholder": "[seu nome]",
+    "companyLabel": "Empresa",
+    "companyPlaceholder": "[empresa]",
+    "contextLabel": "Contexto",
+    "contextPlaceholder": "[conte brevemente sobre a oportunidade ou projeto]",
+    "conversationQuestion": "Podemos marcar uma conversa?",
+    "emailClosing": "Atenciosamente,",
+    "whatsappLabel": "Conversar pelo WhatsApp",
+    "whatsappHeading": "Contato pelo portfólio",
+    "whatsappIntro": "Encontrei seu portfólio e gostaria de conversar sobre uma oportunidade ou projeto.",
+    "whatsappQuestion": "Podemos conversar?"
   },
   "footer": {
     "note": "Projetado e desenvolvido com Nuxt",

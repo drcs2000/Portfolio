@@ -878,6 +878,11 @@ img {
   line-height: 1.7;
 }
 
+.contact-links {
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+
 .contact-link {
   display: flex;
   width: 100%;
@@ -885,14 +890,46 @@ img {
   justify-content: space-between;
   gap: 20px;
   padding: 18px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.45);
   border-bottom: 1px solid rgba(255, 255, 255, 0.45);
   font-size: clamp(16px, 2vw, 23px);
   font-weight: 700;
   overflow-wrap: anywhere;
 }
 
-.contact-link svg,
+.contact-link:last-child {
+  border-bottom: 0;
+}
+
+.contact-link:hover {
+  color: var(--green);
+}
+
+.contact-link--whatsapp {
+  font-size: clamp(15px, 1.5vw, 19px);
+}
+
+.contact-channel {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-channel svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-link small {
+  margin-left: auto;
+  color: #dce3ff;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.contact-link > svg,
 .social-links svg {
   flex: 0 0 auto;
   width: 19px;
@@ -1203,6 +1240,26 @@ img {
   .social-links {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .contact-link {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .contact-link small {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 32px;
+  }
+
+  .contact-link--whatsapp .contact-channel {
+    white-space: nowrap;
+  }
+
+  .contact-link > svg {
+    grid-column: 2;
+    grid-row: 1 / span 2;
   }
 
   .site-footer .container {

@@ -17,7 +17,7 @@
           <button type="button" class="locale-switch" :aria-label="t('nav.languageLabel')" @click="changeLocale">
             {{ nextLocale.toUpperCase() }}
           </button>
-          <a class="icon-button" href="mailto:davirangelcamara@gmail.com" :aria-label="t('nav.contact')">
+          <a class="icon-button" :href="emailHref" :aria-label="t('nav.contact')">
             <Icon name="lucide:mail" />
           </a>
         </div>
@@ -35,7 +35,7 @@
               {{ t('hero.primaryCta') }}
               <Icon name="lucide:arrow-down-right" />
             </a>
-            <a class="button button-secondary" href="mailto:davirangelcamara@gmail.com">{{ t('hero.secondaryCta') }}</a>
+            <a class="button button-secondary" :href="emailHref">{{ t('hero.secondaryCta') }}</a>
           </div>
           <div class="hero-meta">
             <span><Icon name="lucide:map-pin" />{{ t('hero.location') }}</span>
@@ -168,7 +168,17 @@
           <div><p class="section-index">05 / {{ t('contact.eyebrow') }}</p><h2>{{ t('contact.title') }}</h2></div>
           <div class="contact-copy">
             <p>{{ t('contact.text') }}</p>
-            <a class="contact-link" href="mailto:davirangelcamara@gmail.com">davirangelcamara@gmail.com <Icon name="lucide:arrow-up-right" /></a>
+            <div class="contact-links">
+              <a class="contact-link" :href="emailHref">
+                <span class="contact-channel"><Icon name="lucide:mail" />davirangelcamara@gmail.com</span>
+                <Icon name="lucide:arrow-up-right" />
+              </a>
+              <a class="contact-link contact-link--whatsapp" :href="whatsappHref" target="_blank" rel="noreferrer">
+                <span class="contact-channel"><Icon name="lucide:message-circle" />{{ t('contact.whatsappLabel') }}</span>
+                <small>+55 61 99127-2679</small>
+                <Icon name="lucide:arrow-up-right" />
+              </a>
+            </div>
             <div class="social-links">
               <a href="https://www.linkedin.com/in/davirangelcamara" target="_blank" rel="noreferrer">LinkedIn <Icon name="lucide:arrow-up-right" /></a>
               <span>Brasília, Brazil</span>
@@ -235,6 +245,42 @@ const changeLocale = async () => {
   localePreference.value = selectedLocale
   await setLocale(selectedLocale)
 }
+
+const emailHref = computed(() => {
+  const subject = encodeURIComponent(t('contact.emailSubject'))
+  const body = encodeURIComponent([
+    t('contact.messageGreeting'),
+    '',
+    t('contact.emailIntro'),
+    '',
+    `${t('contact.nameLabel')}: ${t('contact.namePlaceholder')}`,
+    `${t('contact.companyLabel')}: ${t('contact.companyPlaceholder')}`,
+    `${t('contact.contextLabel')}: ${t('contact.contextPlaceholder')}`,
+    '',
+    t('contact.conversationQuestion'),
+    '',
+    t('contact.emailClosing')
+  ].join('\r\n'))
+
+  return `mailto:davirangelcamara@gmail.com?subject=${subject}&body=${body}`
+})
+
+const whatsappHref = computed(() => {
+  const message = [
+    `*${t('contact.whatsappHeading')}*`,
+    '',
+    t('contact.messageGreeting'),
+    t('contact.whatsappIntro'),
+    '',
+    `*${t('contact.nameLabel')}:* ${t('contact.namePlaceholder')}`,
+    `*${t('contact.companyLabel')}:* ${t('contact.companyPlaceholder')}`,
+    `*${t('contact.contextLabel')}:* ${t('contact.contextPlaceholder')}`,
+    '',
+    t('contact.whatsappQuestion')
+  ].map(line => encodeURIComponent(line)).join('%0A')
+
+  return `https://wa.me/5561991272679?text=${message}`
+})
 
 const revealObservers = new WeakMap<HTMLElement, IntersectionObserver>()
 const vReveal: Directive<HTMLElement, number> = {
