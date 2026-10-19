@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "title": "Davi Rangel - Desenvolvedor Full Stack e Líder Técnico",
+    "description": "Desenvolvedor Full Stack especializado em Vue.js, Nuxt, Node.js, integrações ERP e liderança técnica."
+  },
+  "nav": {
+    "label": "Navegação principal",
+    "work": "Projetos",
+    "experience": "Experiência",
+    "expertise": "Competências",
+    "contact": "Entrar em contato com Davi",
+    "languageLabel": "Trocar idioma"
+  },
+  "hero": {
+    "eyebrow": "Disponível para oportunidades internacionais",
+    "title": "Eu construo sistemas que mantêm negócios em movimento.",
+    "lede": "Desenvolvedor Full Stack e líder técnico com mais de 5 anos transformando fluxos complexos de ERP, integrações e plataformas legadas em produtos confiáveis.",
+    "primaryCta": "Conheça meu trabalho",
+    "secondaryCta": "Vamos conversar",
+    "location": "Brasília, Brasil",
+    "relocation": "Disponível para Portugal",
+    "portraitAlt": "Retrato de Davi Rangel",
+    "captionRole": "Desenvolvedor Full Stack",
+    "captionFocus": "Vue · Nuxt · Node · PHP"
+  },
+  "proof": {
+    "label": "Destaques profissionais",
+    "items": [
+      { "value": "5+", "label": "anos criando software em produção" },
+      { "value": "70%+", "label": "de redução em erros de integração" },
+      { "value": "4", "label": "desenvolvedores capacitados" },
+      { "value": "4", "label": "empresas entre fintech e ERP" }
+    ]
+  },
+  "work": {
+    "eyebrow": "Trabalhos selecionados",
+    "title": "Produtos complexos, feitos para serem confiáveis.",
+    "intro": "Uma seleção de sistemas, migrações e iniciativas técnicas em que combinei visão de produto com engenharia na prática.",
+    "reliability": "Confiabilidade da integração",
+    "errors": "erros",
+    "cases": [
+      {
+        "type": "Integração ERP · Liderança técnica",
+        "year": "2025 — Atual",
+        "title": "Mercado Livre × TagPlus",
+        "description": "Projetei e desenvolvi uma integração completa de marketplace para uma plataforma ERP, conectando catálogo, pedidos e fluxos operacionais enquanto liderava a equipe responsável pela qualidade das integrações.",
+        "outcomes": [
+          "Contribuição para reduzir em mais de 70% os erros de integração",
+          "Responsável pela arquitetura e entrega de ponta a ponta",
+          "Capacitação de quatro desenvolvedores com revisões e suporte técnico"
+        ],
+        "tags": ["Vue.js", "PHP", "APIs REST", "ERP", "Liderança técnica"],
+        "visualLabel": "Fluxo de arquitetura conectando marketplace, API de integração e ERP"
+      },
+      {
+        "type": "Modernização de plataforma",
+        "year": "2025 — Atual",
+        "title": "Migração de Vue 2 para Nuxt",
+        "description": "Lidero a modernização do front-end de um ERP legado para Vue 3 e Nuxt, evoluindo arquitetura, manutenibilidade, qualidade de código e a experiência de desenvolvimento da equipe.",
+        "tags": ["Vue 2/3", "Nuxt", "TypeScript", "Arquitetura"]
+      },
+      {
+        "type": "TCC · Full Stack",
+        "year": "Projeto selecionado",
+        "title": "Plataforma de bolão esportivo",
+        "description": "Aplicação completa de bolão esportivo com interface em Vue.js, back-end em Node.js e uma funcionalidade de previsão em Python/Django baseada na forma recente e no histórico das equipes.",
+        "tags": ["Vue.js", "Node.js", "Python", "Django", "Modelagem de dados"]
+      }
+    ]
+  },
+  "experience": {
+    "eyebrow": "Experiência",
+    "title": "Da implementação à direção técnica.",
+    "intro": "Minha trajetória passa por ferramentas internas, produtos financeiros, plataformas empresariais e decisões de engenharia que ajudam equipes a entregar com confiança.",
+    "items": [
+      {
+        "period": "mai. 2025 — atual",
+        "role": "Desenvolvedor Full Stack · Líder Técnico",
+        "company": "TagPlus",
+        "summary": "Liderança técnica em integrações de ERP e na modernização de um front-end crítico para o negócio.",
+        "highlights": ["Integrações de marketplace", "Migração Vue 3 / Nuxt", "Mentoria e revisão de código"]
+      },
+      {
+        "period": "jan. 2023 — abr. 2025",
+        "role": "Desenvolvedor Front-end",
+        "company": "Rede São Roque",
+        "summary": "Desenvolvimento de interfaces responsivas, componentes reutilizáveis e fluxos de negócio para a plataforma interna da empresa em uma equipe de quatro pessoas.",
+        "highlights": ["Vue.js", "Node.js", "APIs REST"]
+      },
+      {
+        "period": "jul. 2022 — abr. 2024",
+        "role": "Desenvolvedor Full Stack",
+        "company": "Banco Afro",
+        "summary": "Entrega de aplicações financeiras públicas e internas, de interfaces em Vue/Nuxt a serviços Node.js e contribuições no aplicativo móvel Afro Pay.",
+        "highlights": ["Nuxt", "Node.js", "Flutter", "Docker"]
+      },
+      {
+        "period": "ago. 2021 — set. 2022",
+        "role": "Desenvolvedor Full Stack",
+        "company": "Telemont",
+        "summary": "Desenvolvimento de sistemas corporativos internos em parceria com o SENAI, apoiando autenticação, administração e fluxos operacionais.",
+        "highlights": ["Vue.js", "PHP", "Sistemas empresariais"]
+      }
+    ]
+  },
+  "expertise": {
+    "eyebrow": "Competências",
+    "title": "Uma visão full stack do produto.",
+    "intro": "Atuo entre interface, serviços e entrega, com especialização mais profunda no ecossistema Vue e em integração de sistemas.",
+    "groups": [
+      {
+        "icon": "lucide:panels-top-left",
+        "title": "Engenharia front-end",
+        "description": "Interfaces escaláveis, sistemas reutilizáveis e migrações cuidadosas para aplicações usadas todos os dias.",
+        "skills": ["Vue 2/3", "Nuxt", "TypeScript", "JavaScript", "Vuetify", "Tailwind CSS", "React", "HTML/CSS"]
+      },
+      {
+        "icon": "lucide:server-cog",
+        "title": "Back-end e integrações",
+        "description": "Serviços e integrações construídos com foco em confiabilidade, contratos claros e necessidades operacionais reais.",
+        "skills": ["Node.js", "PHP", "Laravel", "CodeIgniter", "APIs REST", "SQL", "Python", "Django"]
+      },
+      {
+        "icon": "lucide:git-pull-request-arrow",
+        "title": "Qualidade e entrega",
+        "description": "Práticas de engenharia que mantêm equipes alinhadas e tornam o software mais simples de evoluir após o lançamento.",
+        "skills": ["Git", "Docker", "API do GitLab", "Cypress", "Jest", "Code review", "Mentoria"]
+      }
+    ],
+    "principlesLabel": "Como eu trabalho",
+    "principles": ["Assumir responsabilidade pelo resultado", "Tornar a complexidade legível", "Ensinar o que pode escalar", "Melhorar o sistema, não só a tarefa"]
+  },
+  "education": {
+    "eyebrow": "Base",
+    "title": "Formação e idiomas",
+    "degree": "Bacharelado em Sistemas de Informação",
+    "school": "Universidade Federal de Viçosa (UFV)",
+    "period": "2020 — atual",
+    "languages": [
+      { "name": "Português", "level": "Nativo" },
+      { "name": "Inglês", "level": "Proficiência profissional plena" },
+      { "name": "Espanhol", "level": "Intermediário" }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "title": "Vamos construir algo que dure.",
+    "text": "Estou aberto a oportunidades full stack e front-end em que qualidade de produto, autonomia e crescimento técnico importem. Moro em Brasília e tenho disponibilidade para mudança para Portugal."
+  },
+  "footer": {
+    "note": "Projetado e desenvolvido com Nuxt",
+    "backToTop": "Voltar ao topo"
+  }
+}

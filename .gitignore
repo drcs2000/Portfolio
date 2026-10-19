@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Nuxt build output and caches
+.nuxt/
+.output/
+frontend/.nuxt/
+frontend/.output/
+dist/
+frontend/dist/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Codex and browser QA artifacts
+.codex-browser/
+.codex-pdf/
+.chrome-qa-*/
+desktop*.png
+mobile*.png
+
+# Nuxt local data
+.data/
