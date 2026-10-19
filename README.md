@@ -10,10 +10,9 @@ Bilingual professional portfolio built with Nuxt 4, Vue 3, TypeScript, and Nuxt 
 - `@nuxt/icon` with local Lucide icons
 - Server-side rendering and localized SEO metadata
 
-## Routes
+## Languages
 
-- `/` - English (default)
-- `/pt` - Portuguese
+English is the default language. Portuguese can be selected in the header without changing the URL, and the preference is stored in a cookie.
 
 ## Development
 

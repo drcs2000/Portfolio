@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   },
   i18n: {
     defaultLocale: 'en',
-    strategy: 'prefix_except_default',
+    strategy: 'no_prefix',
     detectBrowserLanguage: false,
     langDir: 'locales',
     locales: [

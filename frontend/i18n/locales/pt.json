@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Davi Rangel - Desenvolvedor Full Stack e Líder Técnico",
-    "description": "Desenvolvedor Full Stack especializado em Vue.js, Nuxt, Node.js, integrações ERP e liderança técnica."
+    "title": "Davi Rangel - Desenvolvedor Full Stack | Vue.js e Nuxt",
+    "description": "Desenvolvedor Full Stack especializado em Vue.js, Nuxt, Node.js e integrações ERP."
   },
   "nav": {
     "label": "Navegação principal",
@@ -14,7 +14,7 @@
   "hero": {
     "eyebrow": "Disponível para oportunidades internacionais",
     "title": "Eu construo sistemas que mantêm negócios em movimento.",
-    "lede": "Desenvolvedor Full Stack e líder técnico com mais de 5 anos transformando fluxos complexos de ERP, integrações e plataformas legadas em produtos confiáveis.",
+    "lede": "Desenvolvedor Full Stack com mais de 5 anos transformando fluxos complexos de ERP, integrações e plataformas legadas em produtos confiáveis.",
     "primaryCta": "Conheça meu trabalho",
     "secondaryCta": "Vamos conversar",
     "location": "Brasília, Brasil",
@@ -27,7 +27,7 @@
     "label": "Destaques profissionais",
     "items": [
       { "value": "5+", "label": "anos criando software em produção" },
-      { "value": "70%+", "label": "de redução em erros de integração" },
+      { "value": "70%+", "label": "de redução nos erros do conjunto de integrações" },
       { "value": "4", "label": "desenvolvedores capacitados" },
       { "value": "4", "label": "empresas entre fintech e ERP" }
     ]
@@ -36,21 +36,21 @@
     "eyebrow": "Trabalhos selecionados",
     "title": "Produtos complexos, feitos para serem confiáveis.",
     "intro": "Uma seleção de sistemas, migrações e iniciativas técnicas em que combinei visão de produto com engenharia na prática.",
-    "reliability": "Confiabilidade da integração",
-    "errors": "erros",
+    "reliability": "Resultado geral da área de integrações",
+    "errors": "nos erros",
     "cases": [
       {
-        "type": "Integração ERP · Liderança técnica",
+        "type": "Integrações ERP · Liderança técnica da área",
         "year": "2025 — Atual",
-        "title": "Mercado Livre × TagPlus",
-        "description": "Projetei e desenvolvi uma integração completa de marketplace para uma plataforma ERP, conectando catálogo, pedidos e fluxos operacionais enquanto liderava a equipe responsável pela qualidade das integrações.",
+        "title": "Integrações ERP na TagPlus",
+        "description": "Atuo como líder técnico dentro da área de integrações, contribuindo para a qualidade do conjunto de integrações do ERP e desenvolvendo soluções de ponta a ponta, como a integração com o Mercado Livre.",
         "outcomes": [
-          "Contribuição para reduzir em mais de 70% os erros de integração",
-          "Responsável pela arquitetura e entrega de ponta a ponta",
+          "Contribuição para reduzir em mais de 70% os erros em todas as integrações",
+          "Arquitetura e entrega de ponta a ponta da integração com o Mercado Livre",
           "Capacitação de quatro desenvolvedores com revisões e suporte técnico"
         ],
         "tags": ["Vue.js", "PHP", "APIs REST", "ERP", "Liderança técnica"],
-        "visualLabel": "Fluxo de arquitetura conectando marketplace, API de integração e ERP"
+        "visualLabel": "Representação do ecossistema de integrações conectando marketplace, API e ERP"
       },
       {
         "type": "Modernização de plataforma",
@@ -70,14 +70,14 @@
   },
   "experience": {
     "eyebrow": "Experiência",
-    "title": "Da implementação à direção técnica.",
+    "title": "Da implementação à liderança em integrações.",
     "intro": "Minha trajetória passa por ferramentas internas, produtos financeiros, plataformas empresariais e decisões de engenharia que ajudam equipes a entregar com confiança.",
     "items": [
       {
         "period": "mai. 2025 — atual",
-        "role": "Desenvolvedor Full Stack · Líder Técnico",
+        "role": "Desenvolvedor Full Stack · Líder Técnico de Integrações",
         "company": "TagPlus",
-        "summary": "Liderança técnica em integrações de ERP e na modernização de um front-end crítico para o negócio.",
+        "summary": "Liderança técnica dentro da área de integrações de ERP, além da atuação na modernização de um front-end crítico para o negócio.",
         "highlights": ["Integrações de marketplace", "Migração Vue 3 / Nuxt", "Mentoria e revisão de código"]
       },
       {

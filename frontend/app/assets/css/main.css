@@ -54,6 +54,24 @@ img {
   overflow: clip;
 }
 
+.reveal-ready {
+  opacity: 0;
+  clip-path: inset(0 0 18% 0);
+  transform: translateY(42px);
+  transition:
+    opacity 650ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    transform 780ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    clip-path 900ms cubic-bezier(0.2, 0.75, 0.25, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, clip-path;
+}
+
+.reveal-ready.is-visible {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+  transform: translateY(0);
+}
+
 .container {
   width: min(calc(100% - 48px), var(--max-width));
   margin-inline: auto;
@@ -141,6 +159,8 @@ img {
 .locale-switch {
   min-width: 46px;
   padding-inline: 11px;
+  background: transparent;
+  cursor: pointer;
   font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 12px;
   font-weight: 700;
@@ -1210,5 +1230,14 @@ img {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready {
+    opacity: 1;
+    clip-path: none;
+    transform: none;
+    transition: none;
   }
 }
