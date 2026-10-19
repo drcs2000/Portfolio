@@ -9,7 +9,9 @@
     "experience": "Experience",
     "expertise": "Expertise",
     "contact": "Contact Davi",
-    "languageLabel": "Switch language"
+    "languageLabel": "Switch language",
+    "menuLabel": "Toggle navigation menu",
+    "resume": "Download résumé"
   },
   "hero": {
     "eyebrow": "Available for international opportunities",
@@ -36,6 +38,9 @@
     "eyebrow": "Selected work",
     "title": "Complex products, made dependable.",
     "intro": "A selection of the systems, migrations, and technical initiatives where I combined product thinking with hands-on engineering.",
+    "independentEyebrow": "Independent projects",
+    "independentTitle": "Products built beyond the day job.",
+    "independentIntro": "Full-stack projects where I explored product ideas, data, and learning through working software.",
     "reliability": "Overall integrations area result",
     "errors": "in errors",
     "cases": [
@@ -55,14 +60,15 @@
       {
         "type": "Platform Modernization",
         "year": "2025 — Now",
-        "title": "Vue 2 to Nuxt migration",
-        "description": "Leading the modernization of a legacy ERP front end toward Vue 3 and Nuxt, improving architecture, maintainability, code quality, and the development experience for the team.",
+        "title": "Vue 2 / Nuxt 2 to Vue 3 / Nuxt 3 migration",
+        "description": "Leading the modernization of a legacy ERP front end from Vue 2 and Nuxt 2 to Vue 3 and Nuxt 3, including the state management migration from Vuex to Pinia and improvements to architecture, maintainability, and code quality.",
         "outcomes": [
-          "Planned a gradual Vue 2 to Vue 3 and Nuxt migration without interrupting ongoing ERP development",
+          "Planned a gradual migration from Vue 2 and Nuxt 2 to Vue 3 and Nuxt 3 without interrupting ongoing ERP development",
+          "Migrated state management from Vuex to Pinia, adopting a more modular structure aligned with the new ecosystem",
           "Evolved the front-end architecture and standardized reusable components",
           "Improved maintainability, code quality, and the team's development experience"
         ],
-        "tags": ["Vue 2/3", "Nuxt", "TypeScript", "Architecture"]
+        "tags": ["Vue 2/3", "Nuxt 2/3", "Vuex", "Pinia", "TypeScript", "Architecture"]
       },
       {
         "type": "Capstone · Full Stack",
@@ -74,7 +80,27 @@
           "Built the Node.js back end and competition data model",
           "Created a FastAPI and scikit-learn prediction service consumed by the application"
         ],
-        "tags": ["Vue.js", "Node.js", "Python", "FastAPI", "scikit-learn"]
+        "tags": ["Vue.js", "Node.js", "Python", "FastAPI", "scikit-learn"],
+        "links": [
+          { "label": "Open project", "url": "https://mvp-kappa-two.vercel.app/" },
+          { "label": "View source", "url": "https://github.com/drcs2000/mvp" }
+        ]
+      },
+      {
+        "type": "Study Tool · Full Stack",
+        "year": "Personal project",
+        "title": "Operating Systems Quiz",
+        "description": "An application I built to support my Operating Systems studies through quizzes with difficulty levels, saved progress, and a ranking shared among participants.",
+        "outcomes": [
+          "Built a responsive Vue 3 quiz experience with difficulty selection and immediate feedback",
+          "Managed application state with Pinia and persisted each session's progress locally",
+          "Developed an Express API backed by PostgreSQL for questions and score rankings"
+        ],
+        "tags": ["Vue 3", "Pinia", "Express", "PostgreSQL", "REST APIs"],
+        "links": [
+          { "label": "Open project", "url": "https://sistemas-operacionais-jeps.vercel.app/" },
+          { "label": "View source", "url": "https://github.com/drcs2000/sistemas-operacionais" }
+        ]
       }
     ]
   },
@@ -85,7 +111,7 @@
     "items": [
       {
         "period": "May 2025 — Present",
-        "role": "Mid-level Systems Analyst I · Technical Lead, Integrations",
+        "role": "Full Stack Developer · Technical Lead, Integrations",
         "company": "TagPlus",
         "summary": "Progressed from Junior Developer I to Mid-level Systems Analyst I, taking on technical leadership within the integrations area and strategic ERP modernization projects.",
         "positions": [
@@ -98,7 +124,7 @@
               "Technical leadership within the systems integrations area, defining solutions, developing features, and resolving complex front-end and back-end issues.",
               "End-to-end development of the integration between TagPlus and Mercado Livre.",
               "Technical enablement of four developers for the integrations area, sharing knowledge about architecture, business rules, and integration workflows.",
-              "Technical leadership of the team migrating the legacy ERP from Vue 2 to Vue 3 and Nuxt 3.",
+              "Technical leadership of the team migrating the legacy ERP from Vue 2 and Nuxt 2 to Vue 3 and Nuxt 3, including the replacement of Vuex with Pinia.",
               "Active participation in code reviews, technical guidance, and the adoption of engineering best practices."
             ],
             "closing": "This position consolidated my experience in technical leadership, full-stack development, software architecture, systems integration, and technical decision-making.",
@@ -127,17 +153,17 @@
             "intro": "I worked on the team responsible for TagPlus 2.0, a strategic project to modernize and replace the legacy ERP with a platform focused on scalability, performance, usability, and maintainability.",
             "responsibilities": [
               "Development of new features and interfaces with Vue.js and Nuxt, translating complex ERP business rules into intuitive solutions.",
-              "Active participation in the Vue 3 and Nuxt 3 migration and the gradual replacement of the legacy system.",
+              "Active participation in the migration from Vue 2 and Nuxt 2 to Vue 3 and Nuxt 3, including adopting Pinia in place of Vuex and gradually replacing the legacy system.",
               "Creation and maintenance of reusable components and visual standards.",
               "Development and maintenance of automated tests with Cypress.",
               "Participation in code reviews and sharing of engineering best practices.",
               "Implementation of features aligned with business rules and ERP customer needs."
             ],
             "closing": "This experience deepened my Vue.js expertise and broadened my understanding of front-end architecture, software quality, and enterprise application maintenance.",
-            "technologies": ["Vue.js", "Vue 3", "Nuxt", "Nuxt 3", "JavaScript", "Cypress", "Git"]
+            "technologies": ["Vue.js", "Vue 2", "Vue 3", "Nuxt 2", "Nuxt 3", "Vuex", "Pinia", "JavaScript", "Cypress", "Git"]
           }
         ],
-        "highlights": ["Marketplace integrations", "Vue 3 / Nuxt migration", "Mentoring & code review"]
+        "highlights": ["Marketplace integrations", "Vue 2/3 · Nuxt 2/3 · Vuex/Pinia migration", "Mentoring & code review"]
       },
       {
         "period": "Jan 2023 — Apr 2025",
@@ -252,7 +278,7 @@
         "icon": "lucide:panels-top-left",
         "title": "Front-end engineering",
         "description": "Scalable interfaces, reusable systems, and thoughtful migrations for applications people use every day.",
-        "skills": ["Vue 2/3", "Nuxt", "TypeScript", "JavaScript", "Vuetify", "Tailwind CSS", "React", "HTML/CSS"]
+        "skills": ["Vue 2/3", "Nuxt 2/3", "Vuex", "Pinia", "TypeScript", "JavaScript", "Vuetify", "Tailwind CSS", "React", "HTML/CSS"]
       },
       {
         "icon": "lucide:server-cog",
@@ -275,7 +301,7 @@
     "title": "Education & languages",
     "degree": "B.Sc. in Information Systems",
     "school": "Federal University of Viçosa (UFV)",
-    "period": "2020 — Present",
+    "period": "2020 — Expected graduation in 2026",
     "languages": [
       { "name": "Portuguese", "level": "Native" },
       { "name": "English", "level": "Full professional proficiency" },
@@ -298,6 +324,7 @@
     "conversationQuestion": "Could we schedule a conversation?",
     "emailClosing": "Best regards,",
     "whatsappLabel": "Chat on WhatsApp",
+    "resume": "Download résumé",
     "whatsappHeading": "Portfolio contact",
     "whatsappIntro": "I found your portfolio and would like to discuss an opportunity or project.",
     "whatsappQuestion": "Could we talk?"

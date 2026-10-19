@@ -28,6 +28,7 @@ pnpm-debug.log*
 Thumbs.db
 
 # Codex and browser QA artifacts
+.audit/
 .codex-browser/
 .codex-pdf/
 .chrome-qa-*/

@@ -2,9 +2,9 @@
   <div id="top" class="site-shell">
     <header class="site-header">
       <div class="nav-wrap container">
-        <NuxtLink :to="localePath('/')" class="wordmark" aria-label="Davi Rangel - home">
+        <NuxtLink :to="localePath('/')" class="wordmark" aria-label="Davi Rangel - home" @click="mobileMenuOpen = false">
           <span>DR</span>
-          <small>Full Stack Developer</small>
+          <small>Davi Rangel</small>
         </NuxtLink>
 
         <nav class="desktop-nav" :aria-label="t('nav.label')">
@@ -20,8 +20,30 @@
           <a class="icon-button" :href="emailHref" :aria-label="t('nav.contact')">
             <Icon name="lucide:mail" />
           </a>
+          <button
+            type="button"
+            class="icon-button mobile-menu-toggle"
+            :aria-label="t('nav.menuLabel')"
+            :aria-expanded="mobileMenuOpen"
+            aria-controls="mobile-navigation"
+            @click="mobileMenuOpen = !mobileMenuOpen"
+          >
+            <Icon :name="mobileMenuOpen ? 'lucide:x' : 'lucide:menu'" />
+          </button>
         </div>
       </div>
+
+      <nav v-show="mobileMenuOpen" id="mobile-navigation" class="mobile-nav" :aria-label="t('nav.label')">
+        <div class="container">
+          <button type="button" @click="navigateToSection('work')">{{ t('nav.work') }}</button>
+          <button type="button" @click="navigateToSection('experience')">{{ t('nav.experience') }}</button>
+          <button type="button" @click="navigateToSection('expertise')">{{ t('nav.expertise') }}</button>
+          <a :href="resumeHref" download @click="mobileMenuOpen = false">
+            {{ t('nav.resume') }}
+            <Icon name="lucide:download" />
+          </a>
+        </div>
+      </nav>
     </header>
 
     <main>
@@ -112,19 +134,49 @@
           </article>
 
           <article
-            v-for="(item, index) in content.work.cases.slice(1)"
+            v-reveal="100"
+            class="case-study case-compact case-wide interactive-detail"
+            role="button"
+            tabindex="0"
+            aria-haspopup="dialog"
+            :aria-label="t('details.openNamed', { title: content.work.cases[1].title })"
+            @click="openDetail('work', 1, $event)"
+            @keydown.enter.prevent="openDetail('work', 1, $event)"
+            @keydown.space.prevent="openDetail('work', 1, $event)"
+          >
+            <div class="case-number">02</div>
+            <div>
+              <div class="case-topline"><span>{{ content.work.cases[1].type }}</span><span>{{ content.work.cases[1].year }}</span></div>
+              <h3>{{ content.work.cases[1].title }}</h3>
+              <p>{{ content.work.cases[1].description }}</p>
+              <div class="tag-list"><span v-for="tag in content.work.cases[1].tags" :key="tag">{{ tag }}</span></div>
+              <div class="detail-hint">{{ t('details.open') }} <Icon name="lucide:arrow-up-right" /></div>
+            </div>
+          </article>
+
+          <div v-reveal class="project-divider">
+            <p class="section-index">{{ t('work.independentEyebrow') }}</p>
+            <div>
+              <h3>{{ t('work.independentTitle') }}</h3>
+              <p>{{ t('work.independentIntro') }}</p>
+            </div>
+          </div>
+
+          <article
+            v-for="(item, index) in content.work.cases.slice(2)"
             :key="item.title"
             v-reveal="Number(index) * 100"
-            class="case-study case-compact interactive-detail"
+            class="case-study case-compact case-independent interactive-detail"
+            :class="Number(index) === 0 ? 'case-independent--left' : 'case-independent--right'"
             role="button"
             tabindex="0"
             aria-haspopup="dialog"
             :aria-label="t('details.openNamed', { title: item.title })"
-            @click="openDetail('work', Number(index) + 1, $event)"
-            @keydown.enter.prevent="openDetail('work', Number(index) + 1, $event)"
-            @keydown.space.prevent="openDetail('work', Number(index) + 1, $event)"
+            @click="openDetail('work', Number(index) + 2, $event)"
+            @keydown.enter.prevent="openDetail('work', Number(index) + 2, $event)"
+            @keydown.space.prevent="openDetail('work', Number(index) + 2, $event)"
           >
-            <div class="case-number">0{{ Number(index) + 2 }}</div>
+            <div class="case-number">0{{ Number(index) + 3 }}</div>
             <div>
               <div class="case-topline"><span>{{ item.type }}</span><span>{{ item.year }}</span></div>
               <h3>{{ item.title }}</h3>
@@ -221,7 +273,8 @@
             </div>
             <div class="social-links">
               <a href="https://www.linkedin.com/in/davirangelcamara" target="_blank" rel="noreferrer">LinkedIn <Icon name="lucide:arrow-up-right" /></a>
-              <span>Brasília, Brazil</span>
+              <a :href="resumeHref" download>{{ t('contact.resume') }} <Icon name="lucide:download" /></a>
+              <span>{{ t('hero.location') }}</span>
             </div>
           </div>
         </div>
@@ -308,6 +361,20 @@
                   <span v-for="tag in activeDetail.tags" :key="tag">{{ tag }}</span>
                 </div>
               </div>
+
+              <div v-if="activeDetail.links.length" class="detail-modal-actions">
+                <a
+                  v-for="link in activeDetail.links"
+                  :key="link.url"
+                  :href="link.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="button button-primary"
+                >
+                  {{ link.label }}
+                  <Icon name="lucide:arrow-up-right" />
+                </a>
+              </div>
             </div>
           </section>
         </div>
@@ -352,6 +419,7 @@ type DetailKind = 'work' | 'experience'
 
 const selectedDetail = ref<{ kind: DetailKind, index: number } | null>(null)
 const modalPanel = ref<HTMLElement | null>(null)
+const mobileMenuOpen = ref(false)
 let detailTrigger: HTMLElement | null = null
 
 const formatCurrentDuration = (startDate: string) => {
@@ -389,7 +457,8 @@ const activeDetail = computed(() => {
       summary: item.description,
       contributions: item.outcomes || [],
       positions: [],
-      tags: item.tags || []
+      tags: item.tags || [],
+      links: item.links || []
     }
   }
 
@@ -409,7 +478,8 @@ const activeDetail = computed(() => {
       ...position,
       duration: position.startDate ? formatCurrentDuration(position.startDate) : position.duration
     })),
-    tags: item.highlights || []
+    tags: item.highlights || [],
+    links: []
   }
 })
 
@@ -429,6 +499,11 @@ const closeDetail = () => {
 const handleModalKeydown = (event: KeyboardEvent) => {
   if (event.key === 'Escape' && selectedDetail.value) {
     closeDetail()
+    return
+  }
+
+  if (event.key === 'Escape' && mobileMenuOpen.value) {
+    mobileMenuOpen.value = false
     return
   }
 
@@ -474,9 +549,14 @@ if (localePreference.value !== locale.value) {
 
 const changeLocale = async () => {
   const selectedLocale = nextLocale.value
+  mobileMenuOpen.value = false
   localePreference.value = selectedLocale
   await setLocale(selectedLocale)
 }
+
+const resumeHref = computed(() => locale.value === 'pt'
+  ? '/cv/davi-rangel-desenvolvedor-full-stack.pdf'
+  : '/cv/davi-rangel-full-stack-developer.pdf')
 
 const emailHref = computed(() => {
   const subject = encodeURIComponent(t('contact.emailSubject'))
@@ -565,5 +645,10 @@ useHead(() => ({
 
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}
+
+const navigateToSection = (id: string) => {
+  mobileMenuOpen.value = false
+  scrollTo(id)
 }
 </script>
