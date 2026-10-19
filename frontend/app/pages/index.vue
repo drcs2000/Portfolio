@@ -77,7 +77,17 @@
         </div>
 
         <div class="case-studies">
-          <article v-reveal class="case-study case-featured">
+          <article
+            v-reveal
+            class="case-study case-featured interactive-detail"
+            role="button"
+            tabindex="0"
+            aria-haspopup="dialog"
+            :aria-label="t('details.openNamed', { title: content.work.cases[0].title })"
+            @click="openDetail('work', 0, $event)"
+            @keydown.enter.prevent="openDetail('work', 0, $event)"
+            @keydown.space.prevent="openDetail('work', 0, $event)"
+          >
             <div class="case-copy">
               <div class="case-topline"><span>{{ content.work.cases[0].type }}</span><span>{{ content.work.cases[0].year }}</span></div>
               <h3>{{ content.work.cases[0].title }}</h3>
@@ -86,6 +96,7 @@
                 <li v-for="outcome in content.work.cases[0].outcomes" :key="outcome"><Icon name="lucide:check" />{{ outcome }}</li>
               </ul>
               <div class="tag-list"><span v-for="tag in content.work.cases[0].tags" :key="tag">{{ tag }}</span></div>
+              <div class="detail-hint">{{ t('details.open') }} <Icon name="lucide:arrow-up-right" /></div>
             </div>
             <div class="architecture-visual" :aria-label="content.work.cases[0].visualLabel" role="img">
               <div class="visual-toolbar"><span /><span /><span /><code>integration.flow</code></div>
@@ -100,13 +111,26 @@
             </div>
           </article>
 
-          <article v-for="(item, index) in content.work.cases.slice(1)" :key="item.title" v-reveal="Number(index) * 100" class="case-study case-compact">
+          <article
+            v-for="(item, index) in content.work.cases.slice(1)"
+            :key="item.title"
+            v-reveal="Number(index) * 100"
+            class="case-study case-compact interactive-detail"
+            role="button"
+            tabindex="0"
+            aria-haspopup="dialog"
+            :aria-label="t('details.openNamed', { title: item.title })"
+            @click="openDetail('work', Number(index) + 1, $event)"
+            @keydown.enter.prevent="openDetail('work', Number(index) + 1, $event)"
+            @keydown.space.prevent="openDetail('work', Number(index) + 1, $event)"
+          >
             <div class="case-number">0{{ Number(index) + 2 }}</div>
             <div>
               <div class="case-topline"><span>{{ item.type }}</span><span>{{ item.year }}</span></div>
               <h3>{{ item.title }}</h3>
               <p>{{ item.description }}</p>
               <div class="tag-list"><span v-for="tag in item.tags" :key="tag">{{ tag }}</span></div>
+              <div class="detail-hint">{{ t('details.open') }} <Icon name="lucide:arrow-up-right" /></div>
             </div>
           </article>
         </div>
@@ -123,11 +147,27 @@
           </div>
 
           <div class="timeline">
-            <article v-for="(job, index) in content.experience.items" :key="job.company" v-reveal="Number(index) * 70" class="timeline-item">
+            <article
+              v-for="(job, index) in content.experience.items"
+              :key="job.company"
+              v-reveal="Number(index) * 70"
+              class="timeline-item interactive-detail"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              :aria-label="t('details.openNamed', { title: `${job.role} - ${job.company}` })"
+              @click="openDetail('experience', Number(index), $event)"
+              @keydown.enter.prevent="openDetail('experience', Number(index), $event)"
+              @keydown.space.prevent="openDetail('experience', Number(index), $event)"
+            >
               <div class="timeline-marker"><span>0{{ Number(index) + 1 }}</span></div>
               <div class="timeline-period">{{ job.period }}</div>
               <div class="timeline-role"><h3>{{ job.role }}</h3><p>{{ job.company }}</p></div>
-              <div class="timeline-details"><p>{{ job.summary }}</p><span v-for="highlight in job.highlights" :key="highlight">{{ highlight }}</span></div>
+              <div class="timeline-details">
+                <p>{{ job.summary }}</p>
+                <span v-for="highlight in job.highlights" :key="highlight">{{ highlight }}</span>
+                <div class="detail-hint detail-hint--dark">{{ t('details.open') }} <Icon name="lucide:arrow-up-right" /></div>
+              </div>
             </article>
           </div>
         </div>
@@ -195,6 +235,84 @@
         <a href="#top" @click.prevent="scrollTo('top')">{{ t('footer.backToTop') }} <Icon name="lucide:arrow-up" /></a>
       </div>
     </footer>
+
+    <Teleport to="body">
+      <Transition name="detail-modal">
+        <div v-if="activeDetail" class="detail-modal-backdrop" @mousedown.self="closeDetail">
+          <section
+            ref="modalPanel"
+            class="detail-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="detail-modal-title"
+            tabindex="-1"
+          >
+            <header class="detail-modal-header">
+              <div class="detail-modal-meta">
+                <span>{{ activeDetail.label }}</span>
+                <span>{{ activeDetail.period }}</span>
+              </div>
+              <button type="button" class="detail-modal-close" :aria-label="t('details.close')" @click="closeDetail">
+                <Icon name="lucide:x" />
+              </button>
+            </header>
+
+            <div class="detail-modal-body">
+              <p class="detail-modal-eyebrow">{{ activeDetail.eyebrow }}</p>
+              <h2 id="detail-modal-title">{{ activeDetail.title }}</h2>
+              <strong v-if="activeDetail.company" class="detail-modal-company">{{ activeDetail.company }}</strong>
+              <p class="detail-modal-summary">{{ activeDetail.summary }}</p>
+
+              <div v-if="activeDetail.kind === 'experience'" class="detail-modal-section">
+                <h3>{{ t('details.timeline') }}</h3>
+                <ol class="company-position-timeline">
+                  <li v-for="position in activeDetail.positions" :key="`${position.role}-${position.period}`">
+                    <span class="position-marker" aria-hidden="true" />
+                    <article class="position-content">
+                      <header class="position-header">
+                        <h4>{{ position.role }}</h4>
+                        <p>{{ position.period }} <span>· {{ position.duration }}</span></p>
+                      </header>
+                      <p class="position-intro">{{ position.intro }}</p>
+                      <div class="position-responsibilities">
+                        <h5>{{ t('details.responsibilities') }}</h5>
+                        <ul>
+                          <li v-for="responsibility in position.responsibilities" :key="responsibility">
+                            <Icon name="lucide:check" />
+                            <span>{{ responsibility }}</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <p class="position-closing">{{ position.closing }}</p>
+                      <div class="tag-list position-technologies">
+                        <span v-for="technology in position.technologies" :key="technology">{{ technology }}</span>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+              </div>
+
+              <div v-else class="detail-modal-section">
+                <h3>{{ t('details.contributions') }}</h3>
+                <ul>
+                  <li v-for="item in activeDetail.contributions" :key="item">
+                    <Icon name="lucide:check" />
+                    <span>{{ item }}</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div v-if="activeDetail.kind === 'work'" class="detail-modal-section">
+                <h3>{{ t('details.technologies') }}</h3>
+                <div class="tag-list">
+                  <span v-for="tag in activeDetail.tags" :key="tag">{{ tag }}</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </Transition>
+    </Teleport>
   </div>
 </template>
 
@@ -229,6 +347,120 @@ const content = computed(() => ({
   expertise: resolveMessages(tm('expertise')),
   education: resolveMessages(tm('education'))
 }))
+
+type DetailKind = 'work' | 'experience'
+
+const selectedDetail = ref<{ kind: DetailKind, index: number } | null>(null)
+const modalPanel = ref<HTMLElement | null>(null)
+let detailTrigger: HTMLElement | null = null
+
+const formatCurrentDuration = (startDate: string) => {
+  const [year, month] = startDate.split('-')
+  const startYear = Number(year)
+  const startMonth = Number(month)
+  const now = new Date()
+  const totalMonths = Math.max(1, (now.getFullYear() - startYear) * 12 + now.getMonth() - startMonth + 2)
+  const years = Math.floor(totalMonths / 12)
+  const months = totalMonths % 12
+  const parts = []
+
+  if (years) parts.push(`${years} ${t(years === 1 ? 'details.year' : 'details.years')}`)
+  if (months) parts.push(`${months} ${t(months === 1 ? 'details.month' : 'details.months')}`)
+
+  return parts.join(' ')
+}
+
+const activeDetail = computed(() => {
+  if (!selectedDetail.value) return null
+
+  const { kind, index } = selectedDetail.value
+
+  if (kind === 'work') {
+    const item = content.value.work.cases[index]
+    if (!item) return null
+
+    return {
+      kind,
+      label: t('details.projectLabel'),
+      period: item.year,
+      eyebrow: item.type,
+      title: item.title,
+      company: '',
+      summary: item.description,
+      contributions: item.outcomes || [],
+      positions: [],
+      tags: item.tags || []
+    }
+  }
+
+  const item = content.value.experience.items[index]
+  if (!item) return null
+
+  return {
+    kind,
+    label: t('details.experienceLabel'),
+    period: item.period,
+    eyebrow: item.role,
+    title: item.company,
+    company: '',
+    summary: item.summary,
+    contributions: [],
+    positions: (item.positions || []).map((position: any) => ({
+      ...position,
+      duration: position.startDate ? formatCurrentDuration(position.startDate) : position.duration
+    })),
+    tags: item.highlights || []
+  }
+})
+
+const openDetail = (kind: DetailKind, index: number, event?: Event) => {
+  detailTrigger = event?.currentTarget instanceof HTMLElement ? event.currentTarget : null
+  selectedDetail.value = { kind, index }
+  nextTick(() => modalPanel.value?.focus())
+}
+
+const closeDetail = () => {
+  const trigger = detailTrigger
+  selectedDetail.value = null
+  detailTrigger = null
+  nextTick(() => trigger?.focus())
+}
+
+const handleModalKeydown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape' && selectedDetail.value) {
+    closeDetail()
+    return
+  }
+
+  if (event.key !== 'Tab' || !selectedDetail.value || !modalPanel.value) return
+
+  const focusableElements = Array.from(
+    modalPanel.value.querySelectorAll<HTMLElement>('button, [href], [tabindex]:not([tabindex="-1"])')
+  ).filter(element => !element.hasAttribute('disabled'))
+
+  const firstElement = focusableElements[0]
+  const lastElement = focusableElements.at(-1)
+  if (!firstElement || !lastElement) return
+
+  if (event.shiftKey && (document.activeElement === firstElement || document.activeElement === modalPanel.value)) {
+    event.preventDefault()
+    lastElement.focus()
+  } else if (!event.shiftKey && document.activeElement === lastElement) {
+    event.preventDefault()
+    firstElement.focus()
+  }
+}
+
+watch(selectedDetail, (selection) => {
+  document.body.classList.toggle('modal-open', Boolean(selection))
+})
+
+onMounted(() => window.addEventListener('keydown', handleModalKeydown))
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', handleModalKeydown)
+  document.body.classList.remove('modal-open')
+})
+
 const nextLocale = computed(() => locale.value === 'en' ? 'pt' : 'en')
 const localePreference = useCookie<'en' | 'pt'>('portfolio_locale', {
   default: () => 'en',

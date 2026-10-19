@@ -18,7 +18,7 @@
     "primaryCta": "Conheça meu trabalho",
     "secondaryCta": "Vamos conversar",
     "location": "Brasília, Brasil",
-    "relocation": "Disponível para Portugal",
+    "relocation": "Disponível para realocação em Portugal",
     "portraitAlt": "Retrato de Davi Rangel",
     "captionRole": "Desenvolvedor Full Stack",
     "captionFocus": "Vue · Nuxt · Node · PHP"
@@ -28,7 +28,7 @@
     "items": [
       { "value": "5+", "label": "anos criando software em produção" },
       { "value": "70%+", "label": "de redução nos erros do conjunto de integrações" },
-      { "value": "4", "label": "desenvolvedores capacitados" },
+      { "value": "4", "label": "desenvolvedores orientados em integrações ERP" },
       { "value": "4", "label": "empresas entre fintech e ERP" }
     ]
   },
@@ -47,7 +47,7 @@
         "outcomes": [
           "Contribuição para reduzir em mais de 70% os erros em todas as integrações",
           "Arquitetura e entrega de ponta a ponta da integração com o Mercado Livre",
-          "Capacitação de quatro desenvolvedores com revisões e suporte técnico"
+          "Orientação técnica de quatro desenvolvedores por meio de revisões de código e resolução de problemas em integrações"
         ],
         "tags": ["Vue.js", "PHP", "APIs REST", "ERP", "Liderança técnica"],
         "visualLabel": "Representação do ecossistema de integrações conectando marketplace, API e ERP"
@@ -57,14 +57,24 @@
         "year": "2025 — Atual",
         "title": "Migração de Vue 2 para Nuxt",
         "description": "Lidero a modernização do front-end de um ERP legado para Vue 3 e Nuxt, evoluindo arquitetura, manutenibilidade, qualidade de código e a experiência de desenvolvimento da equipe.",
+        "outcomes": [
+          "Planejamento da migração gradual de Vue 2 para Vue 3 e Nuxt sem interromper a evolução do ERP",
+          "Evolução da arquitetura do front-end e padronização de componentes reutilizáveis",
+          "Melhoria da manutenibilidade, da qualidade do código e da experiência de desenvolvimento da equipe"
+        ],
         "tags": ["Vue 2/3", "Nuxt", "TypeScript", "Arquitetura"]
       },
       {
         "type": "TCC · Full Stack",
         "year": "Projeto selecionado",
         "title": "Plataforma de bolão esportivo",
-        "description": "Aplicação completa de bolão esportivo com interface em Vue.js, back-end em Node.js e uma funcionalidade de previsão em Python/Django baseada na forma recente e no histórico das equipes.",
-        "tags": ["Vue.js", "Node.js", "Python", "Django", "Modelagem de dados"]
+        "description": "Aplicação completa de bolão esportivo com interface em Vue.js, back-end em Node.js e serviço de previsão em Python, FastAPI e scikit-learn baseado na forma recente e no histórico das equipes.",
+        "outcomes": [
+          "Desenvolvimento dos fluxos do bolão e da interface responsiva em Vue.js",
+          "Construção do back-end em Node.js e da modelagem dos dados da competição",
+          "Criação de um serviço de previsão com FastAPI e scikit-learn consumido pela aplicação"
+        ],
+        "tags": ["Vue.js", "Node.js", "Python", "FastAPI", "scikit-learn"]
       }
     ]
   },
@@ -75,9 +85,58 @@
     "items": [
       {
         "period": "mai. 2025 — atual",
-        "role": "Desenvolvedor Full Stack · Líder Técnico de Integrações",
+        "role": "Analista de Sistemas Pleno I · Líder Técnico de Integrações",
         "company": "TagPlus",
-        "summary": "Liderança técnica dentro da área de integrações de ERP, além da atuação na modernização de um front-end crítico para o negócio.",
+        "summary": "Progressão de Desenvolvedor Júnior I a Analista de Sistemas Pleno I, assumindo a liderança técnica da área de integrações e de projetos de modernização do ERP.",
+        "positions": [
+          {
+            "role": "Analista de Sistemas Pleno I",
+            "period": "jul. 2026 — atual",
+            "startDate": "2026-07",
+            "intro": "Como Desenvolvedor Full Stack Pleno I, atuo na liderança técnica de projetos estratégicos, sendo responsável pela evolução das integrações do ERP com plataformas externas e pela modernização da arquitetura front-end do sistema.",
+            "responsibilities": [
+              "Liderança técnica da área de integração de sistemas, atuando na definição de soluções, desenvolvimento de funcionalidades e resolução de problemas complexos no front-end e back-end.",
+              "Desenvolvimento completo, de ponta a ponta, da integração do TagPlus com o Mercado Livre.",
+              "Capacitação técnica de quatro desenvolvedores para atuar na área de integrações, compartilhando conhecimentos sobre arquitetura, regras de negócio e funcionamento das integrações.",
+              "Liderança técnica da equipe responsável pela migração do ERP legado de Vue 2 para Vue 3 e Nuxt 3.",
+              "Participação ativa em revisões de código, acompanhamento técnico e disseminação de boas práticas."
+            ],
+            "closing": "Esta posição consolidou minha atuação em liderança técnica, desenvolvimento full stack, arquitetura de software, integração entre sistemas e tomada de decisões técnicas.",
+            "technologies": ["Vue.js", "Vue 3", "Nuxt 3", "JavaScript", "TypeScript", "PHP", "Laravel", "CodeIgniter", "APIs REST", "SQL", "Git"]
+          },
+          {
+            "role": "Analista de Sistemas Júnior II",
+            "period": "jan. 2026 — jul. 2026",
+            "duration": "7 meses",
+            "intro": "Ampliei minhas responsabilidades técnicas, passando a atuar em projetos estratégicos da empresa, incluindo ferramentas internas e integrações do ERP com plataformas externas.",
+            "responsibilities": [
+              "Participação ativa no desenvolvimento e evolução do Projeto Feedback, ferramenta interna que coleta e analisa dados da API do GitLab para gerar métricas de desenvolvimento, produtividade e acompanhamento das atividades.",
+              "Desenvolvimento de funcionalidades e interfaces para visualização de indicadores técnicos.",
+              "Atuação como principal referência técnica na área de integração de sistemas, com responsabilidade pelas funcionalidades front-end e back-end do segmento.",
+              "Desenvolvimento e manutenção de APIs, interfaces e fluxos de comunicação entre o ERP TagPlus e plataformas externas.",
+              "Análise e resolução autônoma de problemas técnicos nas integrações.",
+              "Continuidade da evolução do TagPlus 2.0 com Vue.js e Nuxt."
+            ],
+            "closing": "Esta etapa representou um avanço importante na minha carreira, trazendo maior autonomia, responsabilidade técnica e experiência em integrações e tomada de decisões.",
+            "technologies": ["Vue.js", "Nuxt", "Node.js", "PHP", "APIs REST", "API do GitLab", "Git", "SQL"]
+          },
+          {
+            "role": "Analista de Sistemas Júnior I",
+            "period": "mai. 2025 — jan. 2026",
+            "duration": "9 meses",
+            "intro": "Atuei na equipe responsável pelo desenvolvimento do TagPlus 2.0, projeto estratégico de modernização e substituição do ERP legado, com foco em escalabilidade, desempenho, usabilidade e manutenibilidade.",
+            "responsibilities": [
+              "Desenvolvimento de novas funcionalidades e interfaces com Vue.js e Nuxt, transformando regras complexas do ERP em soluções intuitivas.",
+              "Participação ativa na migração para Vue 3 e Nuxt 3 e na substituição gradual do sistema legado.",
+              "Criação e manutenção de componentes reutilizáveis e padrões visuais.",
+              "Desenvolvimento e manutenção de testes automatizados com Cypress.",
+              "Participação em revisões de código e compartilhamento de boas práticas.",
+              "Implementação de funcionalidades alinhadas às regras de negócio e às necessidades dos clientes do ERP."
+            ],
+            "closing": "A experiência aprofundou meus conhecimentos no ecossistema Vue.js e ampliou minha visão sobre arquitetura front-end, qualidade de software e manutenção de aplicações corporativas.",
+            "technologies": ["Vue.js", "Vue 3", "Nuxt", "Nuxt 3", "JavaScript", "Cypress", "Git"]
+          }
+        ],
         "highlights": ["Integrações de marketplace", "Migração Vue 3 / Nuxt", "Mentoria e revisão de código"]
       },
       {
@@ -85,23 +144,104 @@
         "role": "Desenvolvedor Front-end",
         "company": "Rede São Roque",
         "summary": "Desenvolvimento de interfaces responsivas, componentes reutilizáveis e fluxos de negócio para a plataforma interna da empresa em uma equipe de quatro pessoas.",
-        "highlights": ["Vue.js", "Node.js", "APIs REST"]
+        "positions": [
+          {
+            "role": "Desenvolvedor Web Front-end",
+            "period": "jan. 2023 — abr. 2025",
+            "duration": "2 anos e 4 meses",
+            "intro": "Integrei uma equipe de quatro desenvolvedores responsável pela construção e evolução do novo site interno da empresa, utilizando Vue.js como principal tecnologia.",
+            "responsibilities": [
+              "Desenvolvimento de interfaces interativas, responsivas e dinâmicas com foco em usabilidade e experiência do usuário.",
+              "Criação e manutenção de componentes personalizados e reutilizáveis.",
+              "Desenvolvimento de novas funcionalidades e aprimoramento das existentes para processos internos da empresa.",
+              "Integração das interfaces com APIs e serviços desenvolvidos pela equipe de back-end.",
+              "Colaboração com a equipe para manter consistência visual, organização do código e qualidade das entregas."
+            ],
+            "closing": "A equipe enxuta proporcionou participação ativa no projeto e fortaleceu minha autonomia, capacidade de resolução de problemas e experiência com aplicações Vue.js voltadas a necessidades reais do negócio.",
+            "technologies": ["Vue.js", "JavaScript", "HTML", "CSS", "APIs REST"]
+          }
+        ],
+        "highlights": ["Vue.js", "JavaScript", "APIs REST"]
       },
       {
         "period": "jul. 2022 — abr. 2024",
         "role": "Desenvolvedor Full Stack",
         "company": "Banco Afro",
         "summary": "Entrega de aplicações financeiras públicas e internas, de interfaces em Vue/Nuxt a serviços Node.js e contribuições no aplicativo móvel Afro Pay.",
-        "highlights": ["Nuxt", "Node.js", "Flutter", "Docker"]
+        "positions": [
+          {
+            "role": "Desenvolvedor Web Full Stack",
+            "period": "out. 2023 — abr. 2024",
+            "duration": "7 meses",
+            "intro": "Assumi maiores responsabilidades no desenvolvimento, manutenção e aprimoramento das aplicações web da empresa, atuando no front-end e no back-end.",
+            "responsibilities": [
+              "Desenvolvimento e aprimoramento da plataforma pública Afro Pay com Vue.js, Nuxt.js e Vuetify.",
+              "Desenvolvimento e manutenção de aplicações web internas.",
+              "Criação e manutenção de APIs REST e funcionalidades back-end em Node.js.",
+              "Entrega de funcionalidades de ponta a ponta entre front-end e back-end.",
+              "Gerenciamento de estados com Vuex e integração com serviços back-end.",
+              "Uso de Docker para configuração e padronização dos ambientes de desenvolvimento."
+            ],
+            "closing": "Esta etapa consolidou meus conhecimentos full stack, minha autonomia e minha compreensão sobre arquitetura, APIs e manutenibilidade.",
+            "technologies": ["Vue.js", "Nuxt.js", "Node.js", "Vuetify", "Vuex", "Docker", "APIs REST"]
+          },
+          {
+            "role": "Estagiário de Desenvolvimento Web",
+            "period": "jul. 2022 — out. 2023",
+            "duration": "1 ano e 4 meses",
+            "intro": "Atuei como desenvolvedor full stack em uma equipe de três pessoas responsável pelas aplicações web do Banco Afro, incluindo a plataforma pública Afro Pay e sistemas internos.",
+            "responsibilities": [
+              "Desenvolvimento de interfaces responsivas e componentes reutilizáveis com Vue.js, Nuxt.js e Vuetify.",
+              "Desenvolvimento e manutenção de APIs e funcionalidades back-end em Node.js.",
+              "Implementação de funcionalidades no front-end e no back-end.",
+              "Gerenciamento de estados e integração com APIs utilizando Vuex.",
+              "Uso de Docker para padronização dos ambientes de desenvolvimento.",
+              "Geração de documentos PDF a partir de HTML utilizando Gotenberg."
+            ],
+            "closing": "A experiência ampliou minha visão sobre arquitetura, integração entre sistemas e desenvolvimento full stack.",
+            "technologies": ["Vue.js", "Nuxt.js", "Node.js", "Vuetify", "Vuex", "Docker", "Gotenberg"]
+          }
+        ],
+        "highlights": ["Nuxt", "Node.js", "Vuex", "Docker"]
       },
       {
         "period": "ago. 2021 — set. 2022",
         "role": "Desenvolvedor Full Stack",
         "company": "Telemont",
         "summary": "Desenvolvimento de sistemas corporativos internos em parceria com o SENAI, apoiando autenticação, administração e fluxos operacionais.",
+        "positions": [
+          {
+            "role": "Desenvolvedor Web Full Stack · Trainee",
+            "period": "ago. 2021 — set. 2022",
+            "duration": "1 ano e 2 meses",
+            "intro": "Participei de projetos internos em parceria com o SENAI, desenvolvendo sistemas de login e outras soluções com Vue.js no front-end e PHP no back-end.",
+            "responsibilities": [
+              "Implementação de sistemas corporativos internos e funcionalidades de autenticação.",
+              "Desenvolvimento de interfaces em Vue.js e funcionalidades back-end em PHP.",
+              "Colaboração com equipes multidisciplinares para entregar soluções eficazes e de qualidade."
+            ],
+            "closing": "A experiência marcou o início da minha trajetória profissional em desenvolvimento full stack e em sistemas corporativos.",
+            "technologies": ["Vue.js", "Vuex", "PHP"]
+          }
+        ],
         "highlights": ["Vue.js", "PHP", "Sistemas empresariais"]
       }
     ]
+  },
+  "details": {
+    "projectLabel": "Projeto em detalhe",
+    "experienceLabel": "Experiência em detalhe",
+    "open": "Ver detalhes",
+    "openNamed": "Ver detalhes de {title}",
+    "close": "Fechar detalhes",
+    "contributions": "Principais contribuições",
+    "timeline": "Progressão na empresa",
+    "responsibilities": "Principais responsabilidades",
+    "year": "ano",
+    "years": "anos",
+    "month": "mês",
+    "months": "meses",
+    "technologies": "Tecnologias e contexto"
   },
   "expertise": {
     "eyebrow": "Competências",
@@ -118,7 +258,7 @@
         "icon": "lucide:server-cog",
         "title": "Back-end e integrações",
         "description": "Serviços e integrações construídos com foco em confiabilidade, contratos claros e necessidades operacionais reais.",
-        "skills": ["Node.js", "PHP", "Laravel", "CodeIgniter", "APIs REST", "SQL", "Python", "Django"]
+        "skills": ["Node.js", "PHP", "Laravel", "CodeIgniter", "APIs REST", "SQL", "Python", "FastAPI"]
       },
       {
         "icon": "lucide:git-pull-request-arrow",
